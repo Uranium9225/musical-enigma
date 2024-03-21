@@ -6,8 +6,8 @@ import requests
 import yt_dlp
 
 
-c_id = "f2c6351bb2214ec2aa9addb92b12edf6"
-c_secret = "8578ce90353f46d8bdcee857897514f6"
+c_id = "YOUR_CLIENT_ID"
+c_secret = "YOUR_CLIENT_SECRET"
 
 # Initialize Spotipy client with client credentials
 client_credentials_manager = SpotifyClientCredentials(
@@ -117,11 +117,11 @@ def get_song_url(song_name):
 
 playlist_url = input("Paste link to [PUBLIC] Spotify Playlist :\n\t")
 choice = input(
-    "Press 'L' or 'l' to list the songs in the playlist or 'D' or 'd' to download them all:"
+    "Press 'L' or 'l' to list the songs in the playlist or 'D' or 'd' to download them all:\n\t"
 )
 if choice.lower() == "l":
     get_playlist_tracks(playlist_url)
 elif choice.lower() == "d":
     download_playlist_tracks(playlist_url)
 else:
-    print("Invalid choice. Please enter 'L' or 'D'.")
+    print("Invalid choice. Please enter 'L' or 'D' next time.")
